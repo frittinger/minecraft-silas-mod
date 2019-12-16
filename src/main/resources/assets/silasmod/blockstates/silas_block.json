@@ -1,0 +1,7 @@
+{
+    "variants": {
+        "": [
+            { "model": "silasmod:block/silas_block" }
+        ]
+    }
+}
