@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "silasmod:item/silas_item"
+    "layer0": "silasmod:item/cote_azure_axe_item"
   }
 }

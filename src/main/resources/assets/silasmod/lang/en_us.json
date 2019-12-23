@@ -1,4 +1,6 @@
 {
-  "item.silasmod.silas_item": "Silas Item",
+  "item.silasmod.cote_azure_axe_item": "Cote Azure Axe Item",
+  "block.silasmod.freiburg_block": "Freiburg Block",
+  "block.silasmod.nizza_block": "Nizza Block",
   "itemGroup.silasmod": "Silas Mod"
 }

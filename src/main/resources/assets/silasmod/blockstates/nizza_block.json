@@ -1,0 +1,9 @@
+{
+    "variants": {
+        "": [
+            {
+                "model": "silasmod:block/nizza_block"
+            }
+        ]
+    }
+}
