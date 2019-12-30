@@ -10,6 +10,8 @@ import net.minecraft.tags.Tag;
 import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.common.Tags;
 import net.schnegg.minecraft.SilasMod;
+import net.schnegg.minecraft.init.ModBlocks;
+import net.schnegg.minecraft.init.ModItems;
 import net.schnegg.minecraft.item.ModTags;
 
 import java.util.Arrays;
@@ -18,27 +20,27 @@ import java.util.function.Consumer;
 import java.util.stream.Stream;
 
 public class MyRecipeProvider extends RecipeProvider {
+
     public MyRecipeProvider(DataGenerator generatorIn) {
         super(generatorIn);
     }
 
     @Override
     protected void registerRecipes(Consumer<IFinishedRecipe> consumer) {
-        ShapedRecipeBuilder.shapedRecipe(Items.DIAMOND, 5) //
-                .patternLine("TTT") //
-                .patternLine("TXT") //
-                .patternLine("TTT") //
-                .key('T', Blocks.DIRT) //
-                .key('X', ModTags.Items.TUTORIAL) //
-                .addCriterion("has_dirt", hasItem(Blocks.DIRT)) //
-                .build(consumer, new ResourceLocation(SilasMod.MOD_ID, "tutorial_diamonds")); // TODO
+        ShapedRecipeBuilder.shapedRecipe(ModItems.COTE_AZURE_AXE_ITEM, 5) //
+                .patternLine("NNN") //
+                .patternLine("FNF") //
+                .patternLine("FNF") //
+                .key('N', ModBlocks.NIZZA_BLOCK) //
+                .key('F', ModBlocks.FREIBURG_BLOCK) //
+                .build(consumer, new ResourceLocation(SilasMod.MOD_ID, "cote_azure_axe"));
 
-        ShapelessRecipeBuilder.shapelessRecipe(Blocks.DIAMOND_BLOCK, 2) //
+        ShapelessRecipeBuilder.shapelessRecipe(ModBlocks.NIZZA_BLOCK, 2) //
                 .addIngredient(ModTags.Items.TUTORIAL) //
                 .addIngredient(Blocks.DIRT) //
                 .addIngredient(Blocks.DIRT) //
                 .addCriterion("has_dirt", hasItem(Blocks.DIRT)) //
-                .build(consumer, new ResourceLocation(SilasMod.MOD_ID, "tutorial_diamond_blocks")); // TODO
+                .build(consumer, new ResourceLocation(SilasMod.MOD_ID, "tutorial_nizza_blocks")); // TODO
 
         CookingRecipeBuilder.smeltingRecipe(Ingredient.fromTag(ModTags.Items.TUTORIAL), Blocks.DIRT, 3, 20) //
                 .addCriterion("has_tutorial_stuff", hasItem(ModTags.Items.TUTORIAL)) //
